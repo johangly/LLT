@@ -1,3 +1,7 @@
+const $slider = document.querySelector('.glide');
+window.addEventListener('load', function() {
+    new Glide($slider).mount()
+})
 const $button = document.querySelector(".button-hamburguer");
 const $line1 = document.querySelector(".line-1");
 const $line2 = document.querySelector(".line-2");
@@ -5,7 +9,8 @@ const $line3 = document.querySelector(".line-3");
 const $nav = document.querySelector(".mobile__nav");
 const $buttonLines = document.querySelectorAll(".animated");
 const $body = document.querySelector("#body");
-new Glide('.glide').mount();
+// new Glide('.glide').mount();
+
 let contador = 0;
 let header = document.querySelector('.header');
 let $logo = document.querySelector('#logo');
