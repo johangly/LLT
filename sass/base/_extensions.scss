@@ -1,0 +1,294 @@
+@use "variables" as var;
+%align-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+%neon-ligth {
+    box-shadow: 0 0 25px 0 #252525;
+}
+
+%neon {
+    box-shadow: 0 0 14px 0 #97f500;
+}
+
+%title {
+    color: var.$black;
+    font-family: var.$title-font;
+    font-size: clamp(25px, 3.5vw, 35px);
+    margin-bottom: 45px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+%padding {
+    padding: 90px clamp(11px, 5.5vw, 110px);
+}
+
+%paragraph {
+    color: var.$black;
+    font-family: var.$text-font;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 500px;
+    opacity: 95%;
+    line-height: 32px;
+    text-align: center;
+}
+
+%button {
+    background-color: var.$principal-color;
+    border-radius: 8px;
+    color: var.$black;
+    display: inline-block;
+    font-size: clamp(13px, 4.2vw, 16px);
+    font-weight: 400;
+    margin: 10px;
+    overflow: hidden;
+    padding: 12px 30px;
+    position: relative;
+    text-align: center;
+    transition: 120ms ease all;
+    z-index: 2;
+}
+
+%first-letter {
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+%font_large {
+    font-size: clamp(34px, 6vw, 55px) !important;
+}
+
+$cubic-bezier-in: cubic-bezier(0, 0.8, 0.74, 0.97);
+.button-hamburguer {
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    margin-left: auto;
+    min-height: 45px;
+    min-width: 50px;
+    position: relative;
+}
+
+.animated {
+    background-color: var.$white;
+    border-radius: 4px;
+    height: 3px;
+    margin: 12px;
+    transition: 1s ease all;
+    width: 25px;
+}
+
+.buttonScrolled {
+    span {
+        background-color: #333;
+    }
+}
+
+.no-animation {
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+.center {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.line-1 {
+    -webkit-animation: line-1-move-rev 0.7s ease-in-out;
+    animation: line-1-move-rev 0.7s ease-in-out;
+    position: absolute;
+    top: 0;
+}
+
+.line-2 {
+    -webkit-animation: line-3-move-rev 0.7s ease-in-out;
+    animation: line-3-move-rev 0.7s ease-in-out;
+    bottom: calc(50% - 6.9px * 2);
+    position: absolute;
+}
+
+.line-3 {
+    -webkit-animation: line-2-move-rev 0.7s ease-in-out;
+    animation: line-2-move-rev 0.7s ease-in-out;
+    bottom: 0;
+    position: absolute;
+}
+
+.animation-1 {
+    -webkit-animation: line-1-move 0.7s cubic-bezier(1, 0.01, 0.66, 0.86) forwards;
+    animation: line-1-move 0.7s cubic-bezier(1, 0.01, 0.66, 0.86) forwards;
+}
+
+.animation-2 {
+    -webkit-animation: line-2-move 0.7s cubic-bezier(1, 0.01, 0.66, 0.86) forwards;
+    animation: line-2-move 0.7s cubic-bezier(1, 0.01, 0.66, 0.86) forwards;
+}
+
+.animation-3 {
+    -webkit-animation: line-3-move 0.4s cubic-bezier(1, 0.01, 0.66, 0.86) forwards;
+    animation: line-3-move 0.4s cubic-bezier(1, 0.01, 0.66, 0.86) forwards;
+}
+
+@-webkit-keyframes line-1-move {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: calc(50% - 6.5px * 2);
+    }
+    100% {
+        top: calc(50% - 6.5px * 2);
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes line-1-move {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: calc(50% - 6.5px * 2);
+    }
+    100% {
+        top: calc(50% - 6.5px * 2);
+        transform: rotate(135deg);
+    }
+}
+
+@-webkit-keyframes line-2-move {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: calc(50% - 7px * 2);
+    }
+    100% {
+        bottom: calc(50% - 7px * 2);
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes line-2-move {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: calc(50% - 7px * 2);
+    }
+    100% {
+        bottom: calc(50% - 7px * 2);
+        transform: rotate(225deg);
+    }
+}
+
+@-webkit-keyframes line-3-move {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes line-3-move {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes line-1-move-rev {
+    0% {
+        top: calc(50% - 7px * 2);
+        transform: rotate(135deg);
+    }
+    50% {
+        top: calc(50% - 7px * 2);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes line-1-move-rev {
+    0% {
+        top: calc(50% - 7px * 2);
+        transform: rotate(135deg);
+    }
+    50% {
+        top: calc(50% - 7px * 2);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@-webkit-keyframes line-2-move-rev {
+    0% {
+        bottom: calc(50% - 7px * 2);
+        transform: rotate(225deg);
+    }
+    50% {
+        bottom: calc(50% - 7px * 2);
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes line-2-move-rev {
+    0% {
+        bottom: calc(50% - 7px * 2);
+        transform: rotate(225deg);
+    }
+    50% {
+        bottom: calc(50% - 7px * 2);
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@-webkit-keyframes line-3-move-rev {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes line-3-move-rev {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

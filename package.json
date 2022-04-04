@@ -1,0 +1,16 @@
+{
+  "name": "devv",
+  "version": "1.0.0",
+  "description": "Somos una empresa de el tigre encargada de la administracion de torneos de videojuegos competitivos como lo son League of Legends, Valorant, Counter-Strike:Global Offensive, etc, contamos con todo para crear una experiencia competitiva inolvidable, con premios asombrosos y mucho mas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.5.2",
+    "sass": "^1.49.9"
+  }
+}

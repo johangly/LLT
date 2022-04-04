@@ -1,0 +1,13 @@
+// Base
+@use 'base/reset';
+@use 'base/variables';
+@use 'base/effects';
+@use 'base/extensions';
+// Layout
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
+// ? TODO: ponerle las propiedades inert.js a los objetos que correspondan 
+// TODO: agregar un delay a las animaciones fade up??
+// @media screen and (max-width: 814px)
+// TODO: agregar en la seccion de torneos una animacion para el bg color de los modals

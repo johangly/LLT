@@ -1,0 +1,56 @@
+@use "variables" as var;
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    &:focus-visible {
+        outline: 3px solid #2097ff !important;
+    }
+}
+
+video {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+strong {
+    font-size: inherit;
+}
+
+body {
+    max-width: 4000px;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var.$principal-color;
+    border-right: 1px solid var.$principal-color;
+}
