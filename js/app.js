@@ -1,4 +1,3 @@
-import Glide from '@glidejs/glide';
 const $button = document.querySelector(".button-hamburguer");
 const $line1 = document.querySelector(".line-1");
 const $line2 = document.querySelector(".line-2");
